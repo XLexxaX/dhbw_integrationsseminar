@@ -37,7 +37,7 @@ public class FriendCountMR {
 		String in = "./src/main/resources/Friends.txt";
 		String out = "./src/main/resources/friend_results";
 		Job job = new Job(conf, "friend count");
-		job.setJarByClass(FriendCountMRSolution.class);
+		job.setJarByClass(FriendCountMR.class);
 		job.setMapperClass(MyMapper.class);
 		job.setReducerClass(MyReducer.class);
 		job.setOutputKeyClass(Text.class);
