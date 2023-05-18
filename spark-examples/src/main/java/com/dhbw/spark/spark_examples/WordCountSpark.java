@@ -22,7 +22,8 @@ public class WordCountSpark
 	    Path file = Paths.get("./src/main/resources/Text.txt");
 	
 	    SparkConf sparkConf = new SparkConf().setAppName("WordCountSpark").set("spark.master", "local");
-	    
+	    sparkConf.set("spark.testing.memory", "2453012480");   
+	
 	    JavaSparkContext ctx = new JavaSparkContext(sparkConf);
 	    
 	    JavaRDD<String> lines = ctx.textFile(file.toString(), 1);
